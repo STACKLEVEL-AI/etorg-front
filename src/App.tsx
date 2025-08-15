@@ -85,7 +85,7 @@ export const App = () => {
   // Функция для отправки запроса к бэкенду
   const sendToBackend = async (question: string): Promise<string> => {
     try {
-      const response = await fetch('http://localhost:8228/ask', {
+      const response = await fetch('https://etorg-back.onrender.com/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
