@@ -41,6 +41,21 @@ export const App = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const currentChat = chats.find((chat) => chat.id === currentChatId);
 
+  useEffect(() => {
+    // Пинг бекенда при загрузке приложения
+    fetch("https://etorg-back.onrender.com/health")
+        .then((res) => {
+          if (!res.ok) throw new Error("Backend not reachable");
+          return res.json();
+        })
+        .then((data) => {
+          console.log("Backend is up:", data);
+        })
+        .catch((err) => {
+          console.error("Error pinging backend:", err);
+        });
+  }, []);
+
   // useEffect для сохранения чатов
   useEffect(() => {
     localStorage.setItem('chats', JSON.stringify(chats));
