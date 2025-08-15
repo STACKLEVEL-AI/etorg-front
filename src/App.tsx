@@ -289,7 +289,7 @@ export const App = () => {
         />
 
         <div
-            className={`flex-1 flex flex-col min-w-[1200px] max-w-full transition-all duration-300 ${
+            className={`flex-1 flex flex-col  max-w-full transition-all duration-300 ${
                 sidebarOpen ? 'ml-0' : 'ml-0'
             }`}
         >
