@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, Bot } from 'lucide-react';
 import type { Chat } from '@/types';
+import Logo from '../assets/logo.png'
 
 interface ChatHeaderProps {
   chat?: Chat;
@@ -25,8 +26,8 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
       </button>
 
       <div className="flex items-center gap-3 flex-1">
-        <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center">
-          <Bot size={20} className="text-white" />
+        <div className="w-10 h-10 rounded-full flex items-center justify-center">
+          <img src={Logo} />
         </div>
 
         <div className="flex-1 min-w-0">

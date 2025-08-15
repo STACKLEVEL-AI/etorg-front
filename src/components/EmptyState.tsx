@@ -1,5 +1,5 @@
 import React from 'react';
-import { Upload, MessageSquare } from 'lucide-react';
+import Logo from '../assets/logo.png'
 
 // Добавляем пропс onQuestionClick
 export const EmptyState: React.FC<{ onQuestionClick: (question: string) => void }> = ({ onQuestionClick }) => {
@@ -15,25 +15,30 @@ export const EmptyState: React.FC<{ onQuestionClick: (question: string) => void 
       <div className="flex-1 overflow-y-auto pt-0">
         <div className="flex items-center justify-center h-full text-center">
           <div className="max-w-md mx-auto p-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-300 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <MessageSquare className="text-white" size={24} />
+            <div
+                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <img src={Logo} size={24}/>
             </div>
             <h3 className="text-xl font-semibold text-slate-800 mb-2">
-              Добро пожаловать в AI Chat
+              Добро пожаловать в Евроторг AI Chat
             </h3>
             <p className="text-slate-600 mb-4">
-              Начните разговор, задайте вопрос или прикрепите файл для анализа
+              Я — ИИ-ассистент Евроторга, чтобы работа шла быстрее и проще. Найти документ? Разобраться с процессом?
+              Подсказать инструкции? Легко!
             </p>
-            <div className="flex flex-col items-center gap-4 text-sm text-slate-500 mb-8">
-              <div className="flex items-center gap-1">
-                <Upload size={16} />
-                Загрузка файлов
-              </div>
-              <div className="flex items-center gap-1">
-                <MessageSquare size={16} />
-                Умные ответы
-              </div>
-            </div>
+            <p className="text-slate-600 mb-4">
+              Давайте начнём — что ищем сегодня?
+            </p>
+            {/*<div className="flex flex-col items-center gap-4 text-sm text-slate-500 mb-8">*/}
+            {/*  <div className="flex items-center gap-1">*/}
+            {/*    <Upload size={16}/>*/}
+            {/*    Загрузка файлов*/}
+            {/*  </div>*/}
+            {/*  <div className="flex items-center gap-1">*/}
+            {/*    <MessageSquare size={16}/>*/}
+            {/*    Умные ответы*/}
+            {/*  </div>*/}
+            {/*</div>*/}
 
             {/* Новый блок с вопросами */}
             <div className="text-left w-full mt-6">

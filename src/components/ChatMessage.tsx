@@ -1,6 +1,7 @@
 import React from 'react';
 import { User, Paperclip } from 'lucide-react';
 import type { Message } from '@/types';
+import Logo from '../assets/logo.png'
 
 interface ChatMessageProps {
   message: Message;
@@ -17,13 +18,13 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
       >
         <div
             className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center
-      ${isUser ? 'bg-blue-500' : 'bg-emerald-500'}
+      ${isUser ? 'bg-blue-500' : ''}
     `}
         >
           {isUser ? (
               <User size={16} className="text-white"/>
           ) : (
-              <div className="text-white text-xs font-bold">AI</div>
+              <div className="text-white text-xs font-bold"><img src={Logo} /></div>
           )}
         </div>
 

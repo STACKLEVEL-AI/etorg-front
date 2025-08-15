@@ -2,6 +2,7 @@ import React from 'react';
 import { X, Plus, MessageSquare, Trash2 } from 'lucide-react';
 import type { Chat } from '@/types';
 import { pluralizeMessages } from '@/utils/pluralize.ts';
+import Logo from '../assets/logo.png'
 
 interface SidebarProps {
   chats: Chat[];
@@ -42,10 +43,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <div className="p-4 border-b border-gray-700">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-green-300 to-green-600 rounded-lg flex items-center justify-center">
-                <MessageSquare size={18} className="text-white" />
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+                <img src={Logo} />
               </div>
-              <h1 className="text-xl font-bold">Евроторг AI</h1>
+              <h1 className="text-xl font-bold">Евроторг AI-ассистент</h1>
             </div>
             <button
               onClick={onToggle}
@@ -112,7 +113,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* Footer */}
         <div className="p-4 border-t border-gray-700">
           <div className="text-xs text-gray-400 text-center">
-            AI Chat Assistant v1.0
+            Stacklevel Group Demo version for Eurotorg
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import { EmptyState } from '@/components/EmptyState';
 import { ChatHeader } from '@/components/ChatHeader';
 import type { Chat, Message } from '@/types';
 
+
 export const App = () => {
   const [chats, setChats] = useState<Chat[]>(() => {
     const savedChats = localStorage.getItem('chats');
