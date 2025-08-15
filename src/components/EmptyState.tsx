@@ -20,7 +20,7 @@ export const EmptyState: React.FC<{ onQuestionClick: (question: string) => void 
   return (
       <div className="flex-1 overflow-y-auto pt-0">
         <div className="flex items-center justify-center h-full text-center">
-          <div className="max-w-md mx-auto p-6">
+          <div className="mx-auto p-6">
             <div
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <img src={Logo} size={24}/>
@@ -49,11 +49,11 @@ export const EmptyState: React.FC<{ onQuestionClick: (question: string) => void 
             {/* Новый блок с вопросами */}
             <div className="text-left w-full mt-6">
               <p className="text-slate-800 font-medium mb-2">Начните с примера:</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                 {questions.map((q, index) => (
                     <button
                         key={index}
-                        className="bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors duration-200 text-sm p-3 rounded-lg text-left"
+                        className="bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors duration-200 text-sm p-3 rounded-lg text-left w-full"
                         onClick={() => onQuestionClick(q)}
                     >
                       {q}
